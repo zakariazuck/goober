@@ -1,0 +1,26 @@
+{
+  "name": "goober",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakariazuck/goober.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakariazuck/goober/issues"
+  },
+  "homepage": "https://github.com/zakariazuck/goober#readme",
+  "devDependencies": {
+    "puppeteer": "^19.4.1"
+  },
+  "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "puppeteer-core": "^10.1.0"
+  }
+}
