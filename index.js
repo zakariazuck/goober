@@ -32,8 +32,7 @@ app.get("/api", async (req, res) => {
 
     let page = await browser.newPage();
     await page.goto("https://www.google.com");
-    //res.send(await page.title());
-    res.send(process.env.TEST_PASSWORD);
+    res.send(await page.title());
   } catch (err) {
     console.error(err);
     return null;
