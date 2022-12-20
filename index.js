@@ -3,6 +3,10 @@ const app = require("express")();
 let chrome = {};
 let puppeteer;
 
+const dotenv = require('dotenv');
+dotenv.config();
+
+
 if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
   chrome = require("chrome-aws-lambda");
   puppeteer = require("puppeteer-core");
@@ -28,7 +32,8 @@ app.get("/api", async (req, res) => {
 
     let page = await browser.newPage();
     await page.goto("https://www.google.com");
-    res.send(await page.title());
+    //res.send(await page.title());
+    res.send(process.env.TEST_PASSWORD);
   } catch (err) {
     console.error(err);
     return null;
